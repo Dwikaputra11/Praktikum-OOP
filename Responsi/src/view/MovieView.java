@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Dwika
+ * @author Dwika    
  */
 public class MovieView extends JFrame implements ActionListener{
     JLabel ljudul = new JLabel("Judul");
@@ -33,7 +33,7 @@ public class MovieView extends JFrame implements ActionListener{
     public JTable tabel;
     DefaultTableModel dtm;
     JScrollPane scrollPane;
-    public Object namaKolom[] = {"Judul", "Alur", "Penokohan", "Akting", "Nilai"};
+    public Object namaKolom[] = {"Judul", "Alur", "Penokohan", "Akting", "Rating"};
 
     public MovieView() {
         dtm = new DefaultTableModel(namaKolom, 0);
@@ -100,15 +100,15 @@ public class MovieView extends JFrame implements ActionListener{
         return tfJudul.getText();
     }
 
-    public String getAlur(){
-        return tfAlur.getText();
+    public double getAlur(){
+        return Double.valueOf(tfAlur.getText());
     }
 
-    public String getPenokohan(){
-        return tfPenokohan.getText();   
+    public double getPenokohan(){
+        return Double.valueOf(tfPenokohan.getText());   
     }
 
-    public String getAkting(){
-        return tfAkting.getText();
+    public double getAkting(){
+        return Double.valueOf(tfAkting.getText());
     }
 }
